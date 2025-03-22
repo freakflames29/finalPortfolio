@@ -48,7 +48,7 @@ let workTl = gsap.timeline(
     {
         scrollTrigger: {
             trigger: "#workContainer",
-            start: "top 50%",
+            start: "top 90%",
             end: "bottom 20% ",
             ease: "power4.out",
             // markers:true,
@@ -56,6 +56,9 @@ let workTl = gsap.timeline(
         }
 
     })
+workTl.from(".bigHeading",{
+    y:200
+})
 workTl.from("#pinterestBento", {
     opacity: 0,
     x: -200
@@ -82,13 +85,19 @@ workTl.from("#canvas", {
     y: 200
 })
 
+
+
+
+
+
 let skillTl = gsap.timeline({
     scrollTrigger: {
         trigger: "#skillsSectionContainer",
         start: "top top",
-        end: "bottom top",
-        ease: "power4.out",
-        markers: true,
+        end: "bottom -10%",
+        ease: "elastic.out(1,0.75)",
+
+        // markers: true,
         scrub: 1,
         pin: true,
     }
@@ -102,31 +111,33 @@ let skillTl = gsap.timeline({
 skillTl.from("#skillHeading", {
     scale: 0.5,
     opacity:0
-})
+},"aa")
 
-gsap.from("#skillSection img", {
-    y:() => gsap.utils.random(50, 400, true),
-    x:()=>() => gsap.utils.random(100, 700, true),
+skillTl.from("#skillSection img", {
+    // y:() => gsap.utils.random(50, 70, true),
+    // x:()=> gsap.utils.random(50, 70, true),
     scale: 2,
     opacity: 0,
-    duration: 1,
+    duration: 0.5,
+    // stagger:0.05,
     stagger: {
-        amount: 2,
+        amount:1,
+        // each: 0.5,
         from: "random"
     },
     // stagger:0.5,
-    scrollTrigger: {
-        trigger: "#skillsSectionContainer",
-        start: "top top",
-        end: "bottom top",
-        ease: "power4.out",
-        scrub: 1,
-    }
-})
+    // scrollTrigger: {
+    //     trigger: "#skillsSectionContainer",
+    //     start: "top top",
+    //     end: "bottom -10%",
+    //     ease: "power4.out",
+    //     scrub: 1,
+    // }
+},"aa")
 let endTl = gsap.timeline({
     scrollTrigger: {
         trigger: "#EmailMeSection",
-        start: "top top",
+        start: "10% top",
         end: "20% middle ",
         ease: "power4.out",
         // markers:true,

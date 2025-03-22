@@ -15,7 +15,10 @@
     padding: 1vw 6vw;
 
 }
-
+a{
+    text-decoration: none;
+    color: inherit;
+}
 body {
     overflow-x: hidden;
 }
@@ -163,6 +166,8 @@ nav {
     display: flex;
     justify-content: center;
     /*background: blue;*/
+    /*background-color: red;*/
+    overflow: hidden;
 }
 
 .bigHeading {
@@ -393,7 +398,7 @@ nav {
 #mysection_left {
     padding-top: 8vw;
     padding-left: 5vw;
-    width: 60%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     gap: 1vw;
@@ -402,7 +407,7 @@ nav {
 }
 
 #mysection_right {
-    width: 40%;
+    width: 60%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -414,8 +419,12 @@ nav {
     width: 90%;
     height: 90%;
     /*height: 100%;*/
-    border-radius: 80px;
+    border-radius: 5%;
     object-fit: cover;
+    object-position: top;
+    mask-image: url("./images/mask.png");
+    /*mask-size: 68vw;*/
+    mask-position: -4vw -8vw;
 }
 
 #skillsSectionContainer {
@@ -432,22 +441,24 @@ nav {
     overflow: hidden;
     width: 100%;
     height: 100%;
-    background: black;
+    background: #212121;
     background-image: url("./images/lightbeams.jpg");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    background-blend-mode: screen;
+    background-blend-mode: difference;
 }
 
 #boldText {
-    font-size: 3vw;
-    line-height: 6vw;
+    font-size: 2.1vw;
+    line-height: 4.8vw;
+    /*overflow: hidden;*/
 }
 
 #boldText h1 {
     font-weight: 700;
     letter-spacing: -0.2vw;
+    overflow: hidden;
 
 }
 
@@ -482,6 +493,12 @@ nav {
 
 #emailriv {
     margin-top: -5vw;
+    margin-left: -3%;
+}
+
+#cvButton {
+    margin-left: -9vw;
+    margin-top: -3vw;
 }
 
 #skillHeading {
@@ -501,11 +518,17 @@ nav {
 }
 
 #react {
-    width: 50vw;
+    width: 45vw;
     top: 50%;
     position: absolute;
     z-index: 1000;
+    /*transition: 1s ease;*/
 }
+
+/*#react:hover {*/
+/*    filter: drop-shadow(2px 4px 29px #00a7ff);*/
+
+/*}*/
 
 #react-blur {
     width: 50vw;
@@ -568,7 +591,9 @@ nav {
     top: 50%;
     position: absolute;
     z-index: 1000;
+    /*transition: 0.8s ease;*/
 }
+
 
 #rails {
     width: 15vw;
@@ -610,21 +635,23 @@ nav {
     background: black;
     position: relative;
 }
-#lastSectionContainer{
+
+#lastSectionContainer {
     padding-top: 60vw;
     color: white;
     background: #3E3E3E;
     background-image: url("./images/tech.jpg");
     background-blend-mode: multiply;
 }
-#rotateText
-{
+
+#rotateText {
     position: absolute;
     font-size: 7vw;
     top: 66%;
     rotate: -10deg;
 }
-#social{
+
+#social {
     width: 100%;
     height: auto;
     display: flex;
@@ -633,11 +660,13 @@ nav {
     padding-right: 3vw;
     align-items: end;
 }
-#social h1{
+
+#social h1 {
 
     font-weight: 200;
     /*transition: 1s all ease;*/
 }
-#social h1:hover{
+
+#social h1:hover {
     text-decoration: underline;
 }

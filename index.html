@@ -163,6 +163,9 @@
             <p>I turn ideas into code, break things to make them stronger, and chase solutions that stick. Just a
                 developer on a mission to create something worth remembering.</p>
 
+            <div id="cvButton">
+                <canvas id="cvB" width="865" height="228"></canvas>
+            </div>
 
         </div>
         <div id="mysection_right">
@@ -185,10 +188,10 @@
                 <!--                </div>-->
             </div>
 
-            <img src="./images/3d%20shapes/react-01.png" alt="" id="react">
             <img src="./images/3d%20shapes/react-01.png" alt="" id="react-blur">
             <img src="./images/3d%20shapes/jwt-01.png" alt="" id="jwt">
             <img src="./images/3d%20shapes/gsap-01.png" alt="" id="gsap">
+            <img src="./images/3d%20shapes/react-01.png" alt="" id="react">
             <img src="./images/3d%20shapes/redux-01.png" alt="" id="redux">
             <img src="./images/3d%20shapes/git-01.png" alt="" id="git">
             <img src="./images/3d%20shapes/dj-01.png" alt="" id="dj">
@@ -216,7 +219,7 @@
         <div id="social">
             <h1>Github</h1>
             <h1>Linkedin</h1>
-            <h1>sourav292922@gmail.com</h1>
+            <h1><a href="mailto:sourav292922@gmail.com">Email</a></h1>
         </div>
     </div>
 
@@ -256,7 +259,7 @@
     });
 
     const emailInstance = new rive.Rive({
-        src: "./images/email.riv",
+        src: "./images/em.riv",
         // OR the path to a discoverable and public Rive asset
         // src: '/public/example.riv',
         canvas: document.getElementById("emailriv"),
@@ -268,6 +271,21 @@
         stateMachines: "State Machine 1",
         onLoad: () => {
             emailInstance.resizeDrawingSurfaceToCanvas();
+        },
+    });
+    const CvInst = new rive.Rive({
+        src: "./images/cv.riv",
+        // OR the path to a discoverable and public Rive asset
+        // src: '/public/example.riv',
+        canvas: document.getElementById("cvB"),
+        animations: 'Timeline 1',
+        autoplay: true,
+        // autoplay: true,
+        //   animations: 'idle',
+        // artboard: "Arboard", // Optional. If not supplied the default is selected
+        stateMachines: "State Machine 1",
+        onLoad: () => {
+            CvInst.resizeDrawingSurfaceToCanvas();
         },
     });
 </script>
