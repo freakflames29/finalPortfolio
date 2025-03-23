@@ -473,7 +473,7 @@ nav {
     border-radius: 5%;
     object-fit: cover;
     object-position: top;
-    mask-image: url("./images/mask.png");
+    /*mask-image: url("./images/mask.png");*/
     /*mask-size: 68vw;*/
     mask-position: -4vw -8vw;
 }
