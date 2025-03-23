@@ -63,7 +63,7 @@ nav {
     /*position: absolute;*/
     bottom: -10%;
     /*transform: translateX(138vw);*/
-    /*opacity: 0;*/
+    visibility: hidden;
 }
 
 .l1 {

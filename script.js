@@ -2,7 +2,8 @@ console.log("Hi")
 
 window.addEventListener("DOMContentLoaded", function () {
 
-window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
+
 // Initialize Lenis
     function lenisScroll() {
 
@@ -22,8 +23,6 @@ window.scrollTo(0, 0);
     }
 
     lenisScroll()
-
-
 
 
     let tl = gsap.timeline({
@@ -62,26 +61,31 @@ window.scrollTo(0, 0);
 // }, "+=0.2")
 
 
-    tl.from("#loader h1",{
-        y:400,
+    tl.from("#loader h1", {
+        y: 400,
+        delay:0.5,
+        visibility:"visible",
+        // display: "visible",
 // ease: "elastic.in(1,1)",
-        stagger:{
-            each:1,
-            start:"random",
-            repeat:1,
-            yoyo:true
+        stagger: {
+            each: 1,
+
+
+            start: "random",
+            repeat: 1,
+            yoyo: true
         }
     })
-    tl.to("#wel",{
-        x:"-110vw",
-        duration:4
-    },"we")
-    tl.to("#go",{
-        x:"110vw",
-        duration:4
-    },"we")
-    tl.to("#loader",{
-        height:0,
+    tl.to("#wel", {
+        x: "-110vw",
+        duration: 4
+    }, "we")
+    tl.to("#go", {
+        x: "110vw",
+        duration: 4
+    }, "we")
+    tl.to("#loader", {
+        height: 0,
     })
 
 
