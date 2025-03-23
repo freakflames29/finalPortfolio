@@ -21,8 +21,48 @@ function lenisScroll() {
 lenisScroll()
 
 let tl = gsap.timeline({
-    ease: "elastic.out(1,0.75)",
+    ease: "power3.out",
 })
+
+// tl.to("#imgLoad",{
+//     delay:1,
+//     marginTop:0,
+//     y:-500,
+//     duration:1,
+//     width:"100vw",
+//     height:"100vh",
+//     rotate: 360
+//
+//     // scale:2,
+// },"a")
+// tl.to("#loaderDiv",{
+//     delay:1,
+//     background:"white",
+//     opacity:0
+//     // display:"none"
+// },"a")
+
+
+tl.to("#loader h1", {
+    marginLeft: "-300vw",
+    duration: 6,
+    // text:"Almost Loaded"
+}, "aa")
+// tl.to("#loader",{
+//     // delay:4,
+//     width:0
+// })
+tl.to("#loader img", {
+    width: "244px",
+    top: "41%",
+    right: " 10%",
+}, "a")
+tl.to("#loader", {
+    // delay:4,
+    width: 0
+}, "a")
+
+
 tl.from("#heroTop h1", {
     y: 300,
     duration: 0.8,
@@ -33,10 +73,12 @@ tl.from("#middleLeft h1", {
     duration: 0.8,
     delay: 0.5
 }, "a")
+
 tl.from("#imageBox", {
     height: "0%",
     ease: "elastic.out(1,0.75)",
-})
+}, "box")
+
 tl.from("#heroBottom", {
     height: "0",
     ease: "elastic.out(1,0.75)",
@@ -56,8 +98,8 @@ let workTl = gsap.timeline(
         }
 
     })
-workTl.from(".bigHeading",{
-    y:200
+workTl.from(".bigHeading", {
+    y: 200
 })
 workTl.from("#pinterestBento", {
     opacity: 0,
@@ -86,10 +128,6 @@ workTl.from("#canvas", {
 })
 
 
-
-
-
-
 let skillTl = gsap.timeline({
     scrollTrigger: {
         trigger: "#skillsSectionContainer",
@@ -110,8 +148,8 @@ let skillTl = gsap.timeline({
 // })
 skillTl.from("#skillHeading", {
     scale: 0.5,
-    opacity:0
-},"aa")
+    opacity: 0
+}, "aa")
 
 skillTl.from("#skillSection img", {
     // y:() => gsap.utils.random(50, 70, true),
@@ -121,7 +159,7 @@ skillTl.from("#skillSection img", {
     duration: 0.5,
     // stagger:0.05,
     stagger: {
-        amount:1,
+        amount: 1,
         // each: 0.5,
         from: "random"
     },
@@ -133,7 +171,7 @@ skillTl.from("#skillSection img", {
     //     ease: "power4.out",
     //     scrub: 1,
     // }
-},"aa")
+}, "aa")
 let endTl = gsap.timeline({
     scrollTrigger: {
         trigger: "#EmailMeSection",
@@ -147,7 +185,7 @@ let endTl = gsap.timeline({
 endTl.to("#EmailMeSection", {
     rotate: "-10deg",
     x: "-10vw",
-    duration:0.5,
+    duration: 0.5,
 
 })
 endTl.from("#rotateText", {
