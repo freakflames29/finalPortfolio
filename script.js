@@ -156,6 +156,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
     let cvTl = gsap.timeline({
         // duration:12
+        ease: "sine.out",
         scrollTrigger: {
             trigger:"#mysection_right",
             // start:"top 50%",
