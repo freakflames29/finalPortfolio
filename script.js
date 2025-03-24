@@ -68,7 +68,7 @@ window.addEventListener("DOMContentLoaded", function () {
         // display: "visible",
 // ease: "elastic.in(1,1)",
         stagger: {
-            each: 1,
+            each: 0.5,
 
 
             start: "random",
@@ -76,14 +76,14 @@ window.addEventListener("DOMContentLoaded", function () {
             yoyo: true
         }
     })
-    tl.to("#wel", {
-        x: "-110vw",
-        duration: 4
-    }, "we")
-    tl.to("#go", {
-        x: "110vw",
-        duration: 4
-    }, "we")
+    // tl.to("#wel", {
+    //     x: "-110vw",
+    //     duration: 4
+    // }, "we")
+    // tl.to("#go", {
+    //     x: "110vw",
+    //     duration: 4
+    // }, "we")
     tl.to("#loader", {
         height: 0,
     })

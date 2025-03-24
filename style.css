@@ -473,9 +473,11 @@ nav {
     border-radius: 5%;
     object-fit: cover;
     object-position: top;
+    /*mask-image: linear-gradient(to bottom,black 80%,transparent);*/
+    /*mask-image: linear-gradient(to bottom,black 80%,transparent);*/
     /*mask-image: url("./images/mask.png");*/
     /*mask-size: 68vw;*/
-    mask-position: -4vw -8vw;
+    /*mask-position: -4vw -8vw;*/
 }
 
 #skillsSectionContainer {
