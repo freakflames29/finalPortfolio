@@ -72,7 +72,8 @@ nav {
     /*background: red;*/
     /*position: absolute;*/
 }
-#wel{
+
+#wel {
     position: absolute;
     font-size: 20vw;
     text-transform: uppercase;
@@ -80,9 +81,10 @@ nav {
     font-weight: 900;
 
 }
-#go{
-     font-weight: 900;
-        font-size: 20vw;
+
+#go {
+    font-weight: 900;
+    font-size: 20vw;
     position: absolute;
     top: 0;
     text-transform: uppercase;
@@ -463,22 +465,60 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    mask-image: linear-gradient(to bottom,black 70%,transparent);
     /*background: yellow;*/
 }
 
-#mysection_right img {
-    width: 90%;
-    height: 90%;
-    /*height: 100%;*/
-    border-radius: 5%;
-    object-fit: cover;
-    object-position: top;
-    /*mask-image: linear-gradient(to bottom,black 80%,transparent);*/
-    /*mask-image: linear-gradient(to bottom,black 80%,transparent);*/
-    /*mask-image: url("./images/mask.png");*/
-    /*mask-size: 68vw;*/
-    /*mask-position: -4vw -8vw;*/
+.rightCol {
+    width: 15%;
+    height: 100%;
+    /*background: pink;*/
+    margin-right: 1px;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    overflow: hidden;
+    align-items: center;
+    mask-image: linear-gradient(to top,black 70%,transparent);
+
 }
+#right2{
+    transform: translateY(-30vh);
+    /*margin-bottom: 60vh;*/
+}#right4{
+    /*transform: translateY(60vh);*/
+    margin-top: -60vh;
+}
+.scrollSkill {
+    width: 100%;
+    height: 100%;
+    /*background: pink;*/
+    margin-right: 1px;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    align-items: center;
+
+}
+
+.rightCol img {
+    width: 80%;
+    object-fit: cover;
+}
+
+/*#mysection_right img {*/
+/*    width: 90%;*/
+/*    height: 90%;*/
+/*    !*height: 100%;*!*/
+/*    border-radius: 5%;*/
+/*    object-fit: cover;*/
+/*    object-position: top;*/
+/*    !*mask-image: linear-gradient(to bottom,black 80%,transparent);*!*/
+/*    !*mask-image: linear-gradient(to bottom,black 80%,transparent);*!*/
+/*    !*mask-image: url("./images/mask.png");*!*/
+/*    !*mask-size: 68vw;*!*/
+/*    !*mask-position: -4vw -8vw;*!*/
+/*}*/
 
 #skillsSectionContainer {
     width: 100%;

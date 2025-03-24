@@ -25,6 +25,7 @@ window.addEventListener("DOMContentLoaded", function () {
     lenisScroll()
 
 
+
     let tl = gsap.timeline({
         ease: "power3.out",
     })
@@ -152,6 +153,45 @@ window.addEventListener("DOMContentLoaded", function () {
     workTl.from("#canvas", {
         y: 200
     })
+
+    let cvTl = gsap.timeline({
+        // duration:12
+        scrollTrigger: {
+            trigger:"#mysection_right",
+            // start:"top 50%",
+            // end:"bottom 60%",
+            // markers:true,
+            // // scrub:1,
+
+        }
+    })
+
+    cvTl.to("#right1 .scrollSkill",{
+        y:"-60vh",
+        repeat:-1,
+        duration:10,
+        yoyo:true
+    },"cv")
+    cvTl.to("#right2",{
+        y:"10vh",
+        repeat:-1,
+        duration:10,
+        yoyo:true
+    },"cv")
+
+     cvTl.to("#right3 .scrollSkill",{
+        y:"-60vh",
+        repeat:-1,
+        duration:10,
+        yoyo:true
+    },"cv")
+    cvTl.to("#right4",{
+        y:"60vh",
+        repeat:-1,
+        duration:10,
+        yoyo:true
+    },"cv")
+
 
 
     let skillTl = gsap.timeline({
