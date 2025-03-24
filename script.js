@@ -1,8 +1,7 @@
 console.log("Hi")
 
-window.addEventListener("DOMContentLoaded", function () {
 
-    window.scrollTo(0, 0);
+window.addEventListener("DOMContentLoaded", function () {
 
 // Initialize Lenis
     function lenisScroll() {
