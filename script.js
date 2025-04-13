@@ -54,24 +54,48 @@ window.addEventListener("DOMContentLoaded", function () {
   //     ease: "power2.inOut"
   // }, "+=0.2")
 
-  tl.from("#loader h1", {
-    y: 400,
-    delay: 0.5,
-    visibility: "visible",
-    // display: "visible",
-    // ease: "elastic.in(1,1)",
-    stagger: {
-      each: 0.3,
+  //existing loader
+  //   tl.from("#loader h1", {
+  //     y: 400,
+  //     delay: 0.5,
+  //     visibility: "visible",
+  //     // display: "visible",
+  //     // ease: "elastic.in(1,1)",
+  //     stagger: {
+  //       each: 0.3,
 
-      start: "random",
-      repeat: 1,
-      yoyo: true,
+  //       start: "random",
+  //       repeat: 1,
+  //       yoyo: true,
+  //     },
+  //   });
+
+  //   tl.to("#loader", {
+  //     height: 0,
+  //   });
+
+  tl.from("#newLoader h1", {
+    x: 100,
+    delay: 0.8,
+    stagger: 0.3,
+    duration: 0.8,
+    opacity: 0,
+    ease: "elastic.out(1,0.75)",
+  });
+  tl.to("#newLoader h1", {
+    y: -200,
+
+    // duration:1,
+  },"newLoader");
+  tl.to(
+    "#newLoader",
+    {
+
+      height: "0%",
+      duration: 0.5,
     },
-  });
-
-  tl.to("#loader", {
-    height: 0,
-  });
+    "newLoader"
+  );
 
   tl.from(
     "#heroTop h1",
@@ -286,16 +310,20 @@ window.addEventListener("DOMContentLoaded", function () {
       end: "20% middle ",
       ease: "power4.out",
       // markers:true,
-    //   pin:true,
+      //   pin:true,
       scrub: 1,
     },
   });
-  endTl.to("#EmailMeSection", {
-    rotate: "-10deg",
-    x: "-10vw",
-    duration: 0.5,
-  },"a");
- 
+  endTl.to(
+    "#EmailMeSection",
+    {
+      rotate: "-10deg",
+      x: "-10vw",
+      duration: 0.5,
+    },
+    "a"
+  );
+
   endTl.from("#rotateText", {
     delay: 1,
     y: -350,
