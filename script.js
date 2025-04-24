@@ -120,7 +120,7 @@ window.addEventListener("DOMContentLoaded", function () {
     "#imageBox",
     {
       height: "0%",
-      ease: "elastic.out(1,0.75)",
+      ease: "power2.out",
     },
     "box"
   );
