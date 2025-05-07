@@ -73,24 +73,29 @@ window.addEventListener("DOMContentLoaded", function () {
   //   tl.to("#loader", {
   //     height: 0,
   //   });
-
+  tl.to("#newLoader h1", {
+    display: "block",
+  },"lo");
   tl.from("#newLoader h1", {
     x: 100,
     delay: 0.8,
     stagger: 0.3,
-    duration: 0.8,
+    duration: 0.5,
     opacity: 0,
     ease: "elastic.out(1,0.75)",
-  });
-  tl.to("#newLoader h1", {
-    y: -200,
+  },"lo");
+  tl.to(
+    "#newLoader h1",
+    {
+      y: -200,
 
-    // duration:1,
-  },"newLoader");
+      // duration:1,
+    },
+    "newLoader"
+  );
   tl.to(
     "#newLoader",
     {
-
       height: "0%",
       duration: 0.5,
     },

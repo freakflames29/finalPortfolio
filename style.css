@@ -35,22 +35,24 @@ nav {
   justify-content: space-between;
 }
 
-#newLoader{
-    width: 100vw;
-    height: 100vh;
-    background-color: #1e1e1e;
-    position: absolute;
-    z-index: 100;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+#newLoader {
+  width: 100vw;
+  height: 100vh;
+  background-color: #1e1e1e;
+  position: absolute;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap: 10;
 }
-#newLoader h1{
-    font-size: 10rem;
-    font-weight: 500;
-
-    will-change: transform;
+#newLoader h1 {
+  font-size: 5vw;
+  font-weight: 500;
+  display: none;
+  margin-right: 20px;
+  will-change: transform;
 }
 
 #loader {
@@ -71,7 +73,6 @@ nav {
   padding-left: 1vw;
   /*align-items: center;*/
 }
-
 
 #loader h1 {
   /*line-height: 24vw;*/
@@ -372,7 +373,7 @@ span {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  border: 1px solid red ;
+  border: 1px solid red;
   /*flex-wrap: wrap;*/
 }
 
@@ -380,8 +381,7 @@ span {
   width: 70%;
   min-height: 100%;
   background: #c4dcff;
-  border: 1px solid #82b3fc ;
-
+  border: 1px solid #82b3fc;
 }
 
 #lowerRight {
@@ -466,7 +466,6 @@ span {
 
   border-radius: 10;
   object-fit: contain;
-
 }
 
 #myContainer {
@@ -595,7 +594,7 @@ span {
   padding: 4vw 4vw;
   background: #fff;
   background: rgb(33 33 33);
-color: #fff;
+  color: #fff;
   position: absolute;
   /*rotate: 10deg;*/
   z-index: 200;
@@ -610,9 +609,7 @@ color: #fff;
   background-position: center;
   /* -webkit-background-clip: text; */
   /* -webkit-text-fill-color: transparent; */
-  mask-image: linear-gradient(to bottom,black 10%,transparent);
-
-
+  mask-image: linear-gradient(to bottom, black 10%, transparent);
 }
 
 #EmailMe h3 {
@@ -778,6 +775,7 @@ color: #fff;
 }
 
 #social {
+  /* background-color: red; */
   width: 100%;
   height: auto;
   display: flex;
@@ -785,6 +783,8 @@ color: #fff;
   justify-content: flex-end;
   padding-right: 3vw;
   align-items: end;
+  position: absolute;
+  bottom: 10px;
 }
 
 #social h1 {
