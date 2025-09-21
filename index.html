@@ -25,34 +25,7 @@
       <h1>Pls open the site in desktop, mobile version is under build</h1>
     </div>
 
-    <!--        <div id="loaderDiv">-->
-    <!--            <div id="intro">-->
-    <!--                <h1>Hi, Welcome to my portfolio</h1>-->
-    <!--                <div id="imgLoad">-->
-
-    <!--                <img src="./images/ss.svg" alt="">-->
-    <!--                </div>-->
-    <!--            </div>-->
-
-    <!--        </div>-->
-
-    <!-- <div id="loader">
-        <div class="l1">
-            <h1 id="load1">1%</h1>
-
-        </div>
-        <div class="l1">
-            <h1 id="load2">10%</h1>
-
-        </div>
-        <div class="l1">
-            <h1 id="load3">100%</h1>
-
-        </div>
-
-
-    </div> -->
-
+  
     <div id="newLoader">
       <h1 style="color: #fe5504">Dream.</h1>
       <h1 style="color: #ffbb03">Code.</h1>
@@ -61,26 +34,50 @@
     </div>
 
    
-   <div
-        class="unicorn-embed"
-        data-us-project="kVBHsEY24iMv1SZqMImv"
-        data-us-scale="1"
-        data-us-dpi="1.5"
-        data-us-lazyload="true"
-        data-us-alttext="Welcome to Unicorn Studio"
-        data-us-arialabel="This is a canvas scene"
-        style="width: 100vw; height: 100vh"
-        ></div>
-        <script>
+    <div id="unicornWrapper" style="width: 100vw; height: 100vh; position: relative;">
+      <!-- Please Wait Loader -->
+      <div id="unicornLoading"
+          style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:#f3f3f3; color:#F36900; font-size:2rem; z-index:10;">
+          <p id="shinyloadingText">Loading Awesomeness...</p>
+      </div>
+      
+      <!-- Unicorn Embed -->
+      <div class="unicorn-embed"
+          data-us-project="kVBHsEY24iMv1SZqMImv"
+          data-us-scale="1"
+          data-us-dpi="1.5"
+          data-us-lazyload="true"
+          data-us-alttext="Welcome to Unicorn Studio"
+          data-us-arialabel="This is a canvas scene"
+          style="width: 100%; height: 100%; display:none;"></div>
+    </div>
+    
+      <script>
+      // Hide unicorn embed initially
+
+   
+
+      const unicornEmbed = document.querySelector('.unicorn-embed');
+      const unicornLoading = document.getElementById('unicornLoading');
+
+      // After your newLoader GSAP animation
+      document.addEventListener('newLoaderDone', function () {
+        unicornEmbed.style.display = 'block';
+
         UnicornStudio.init()
-            .then((scenes) => {
-            // Scenes are ready
-            console.log(scenes);
-            })
-            .catch((err) => {
+          .then((scenes) => {
+            console.log("Unicorn ready:", scenes);
+
+            // Hide loading screen once Unicorn Studio is ready
+            unicornLoading.style.display = 'none';
+          })
+          .catch((err) => {
+            unicornLoading.innerHTML = "<p style='color:red;'>Failed to load scene</p>";
             console.error(err);
-            });
-        </script>
+          });
+      });
+    </script>
+
       <div id="mouse"></div>
       <!-- <div id="heroContainer">
         <div id="heroTop">
@@ -372,7 +369,7 @@
       integrity="sha512-f6bQMg6nkSRw/xfHw5BCbISe/dJjXrVGfz9BSDwhZtiErHwk7ifbmBEtF9vFW8UNIQPhV2uEFVyI/UHob9r7Cw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    ></script>
+    ></>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"

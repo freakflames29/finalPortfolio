@@ -73,17 +73,25 @@ window.addEventListener("DOMContentLoaded", function () {
   //   tl.to("#loader", {
   //     height: 0,
   //   });
-  tl.to("#newLoader h1", {
-    display: "block",
-  },"lo");
-  tl.from("#newLoader h1", {
-    x: 100,
-    delay: 0.8,
-    stagger: 0.3,
-    duration: 0.5,
-    opacity: 0,
-    ease: "elastic.out(1,0.75)",
-  },"lo");
+  tl.to(
+    "#newLoader h1",
+    {
+      display: "block",
+    },
+    "lo"
+  );
+  tl.from(
+    "#newLoader h1",
+    {
+      x: 100,
+      delay: 0.8,
+      stagger: 0.3,
+      duration: 0.5,
+      opacity: 0,
+      ease: "elastic.out(1,0.75)",
+    },
+    "lo"
+  );
   tl.to(
     "#newLoader h1",
     {
@@ -101,6 +109,11 @@ window.addEventListener("DOMContentLoaded", function () {
     },
     "newLoader"
   );
+
+  // Fire custom event when newLoader animation is done
+  tl.eventCallback("onComplete", function () {
+    document.dispatchEvent(new Event("newLoaderDone"));
+  });
 
   tl.from(
     "#heroTop h1",
@@ -334,3 +347,4 @@ window.addEventListener("DOMContentLoaded", function () {
     y: -350,
   });
 });
+
